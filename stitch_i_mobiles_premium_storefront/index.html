@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    name="viewport" />
+  <meta content="mobile_tab" name="shell-type" />
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script
+    id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-fixed-dim": "#aec6ff", "on-secondary-container": "#5b3800", "inverse-surface": "#e3e1e9", "outline": "#8b90a0", "surface-dim": "#121318", "surface-bright": "#38393f", "surface-container-low": "#1a1b21", "tertiary-fixed-dim": "#3de273", "surface-container-high": "#292a2f", "error-container": "#93000a", "on-primary": "#002e6b", "tertiary-fixed": "#66ff8e", "error": "#ffb4ab", "primary-container": "#0070f3", "surface-variant": "#34343a", "surface": "#121318", "on-tertiary-fixed": "#002109", "on-error": "#690005", "secondary": "#ffb95f", "tertiary": "#3de273", "surface-container-lowest": "#0d0e13", "on-secondary-fixed-variant": "#653e00", "primary": "#aec6ff", "secondary-container": "#ee9800", "inverse-on-surface": "#2f3036", "on-secondary-fixed": "#2a1700", "surface-tint": "#aec6ff", "on-tertiary": "#003915", "on-primary-container": "#ffffff", "on-secondary": "#472a00", "on-tertiary-fixed-variant": "#005322", "on-tertiary-container": "#fdfff9", "on-background": "#e3e1e9", "surface-container": "#1e1f25", "primary-fixed": "#d8e2ff", "background": "#121318", "outline-variant": "#414754", "tertiary-container": "#00883c", "surface-container-highest": "#34343a", "secondary-fixed-dim": "#ffb95f", "on-error-container": "#ffdad6", "on-primary-fixed": "#001a43", "on-surface": "#e3e1e9", "on-primary-fixed-variant": "#004397", "on-surface-variant": "#c1c6d7", "inverse-primary": "#0059c5", "secondary-fixed": "#ffddb8" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter-sm": "1rem", "space-md": "1rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "space-xl": "2.5rem", "gutter-lg": "2rem", "gutter": "1.5rem", "space-xs": "0.25rem", "margin-mobile": "1rem", "margin": "1.5rem", "margin-desktop": "3rem" }, "fontFamily": { "body-lg": ["Inter"], "headline-md": ["Inter"], "label-md": ["Inter"], "headline-lg-mobile": ["Inter"], "display-hero-mobile": ["Inter"], "headline-lg": ["Inter"], "headline-sm": ["Inter"], "label-caps": ["Inter"], "body-sm": ["Inter"], "label-lg": ["Inter"], "body-md": ["Inter"], "display-hero": ["Inter"] }, "fontSize": { "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-caps": ["11px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "700" }], "body-sm": ["13px", { "lineHeight": "18px", "letterSpacing": "0.005em", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700" }] } } } };</script>
+</head>
+
+<body
+  class="bg-background font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen selection:bg-primary selection:text-on-primary">
+  <header class="fixed top-0 inset-x-0 z-50 bg-surface/80 backdrop-blur-xl shadow-[0_4px_20px_rgba(0,0,0,0.4)] pt-safe">
+    <div class="max-w-7xl mx-auto h-16 px-space-md flex items-center justify-between gap-space-sm">
+      <div class="flex items-center gap-space-sm shrink-0">
+        <a href="#home" class="flex items-center gap-space-sm"><img alt="i Mobiles Logo"
+            class="h-8 w-auto object-contain"
+            src="https://lh3.googleusercontent.com/aida/AEtjO1V96qIJ7nQQ3ALolqC9fRZDNyoDmPPK2cFopkyI2F1VmgHGxF3ifOvpJzJSZgkrHZ2-Z2B4kBjpp2YCPtcmev7ODSaM9KoMXYbokjeNQJyFxnw5zyaIuFSKFhN03sMEnUz9GjnGoQcF6p63bFMLQK5q7Gkg03S9muYshyWhLjBcKusS2CRvZhuQ_fdbzCCSEG2OnwLQrO2E4Wp238_sk8zxSXMOsprpgUEnNlT_8NwadoV0rPA6-pvt9Ks" />
+          <div class="flex flex-col"><span
+              class="font-label-lg text-label-lg font-bold tracking-tight text-on-surface">i
+              Mobiles</span><span
+              class="font-label-caps text-label-caps uppercase text-primary tracking-wider">Store</span></div>
+        </a>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-6 font-label-md text-label-md font-semibold text-on-surface-variant">
+        <a href="#home" class="hover:text-primary transition-colors">Home</a>
+        <a href="#about" class="hover:text-primary transition-colors">About</a>
+        <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
+        <a href="#products-showcase"
+          class="px-4 py-2 bg-primary text-on-primary rounded-full hover:bg-primary-fixed transition-colors shadow-md flex items-center gap-1"><span
+            class="material-symbols-outlined text-[18px]">shopping_bag</span>View Products</a>
+      </nav>
+
+      <div class="flex items-center gap-space-xs"><a
+          class="min-h-[44px] px-3 rounded-full bg-[#25D366]/15 hover:bg-[#25D366]/25 flex items-center gap-1.5 transition-colors"
+          href="https://wa.me/" rel="noopener noreferrer" target="_blank"><span
+            class="material-symbols-outlined text-[#25D366] text-[18px]">chat</span><span
+            class="font-label-md text-label-md text-[#25D366] font-semibold hidden sm:inline">Chat</span></a><button
+          aria-label="Menu"
+          class="md:hidden min-w-[44px] min-h-[44px] flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"><span
+            class="material-symbols-outlined text-[22px]">menu</span></button>
+        <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 hidden sm:flex"><span
+            class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+      </div>
+    </div>
+  </header>
+  <main id="home" class="flex-1 flex flex-col relative w-full max-w-7xl mx-auto pt-16 pb-28 bg-surface px-space-md">
+    <div class="flex flex-col w-full text-on-surface">
+      <!-- 1. HERO SECTION -->
+      <section class="relative w-full overflow-hidden pt-space-sm pb-space-lg flex flex-col items-center">
+        <!-- Ambient Luminous Glow Orbs -->
+        <div
+          class="absolute -top-12 left-1/2 -translate-x-1/2 w-80 h-80 bg-primary/20 rounded-full blur-[80px] pointer-events-none">
+        </div>
+        <div class="absolute top-28 -right-16 w-56 h-56 bg-secondary/15 rounded-full blur-[70px] pointer-events-none">
+        </div>
+        <div class="relative z-10 w-full flex flex-col items-center text-center">
+          <!-- Eyebrow Badge -->
+          <div class="animate-[fade-in-up_0.8s_ease-out] inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-container-high/40 backdrop-blur-md border border-white/10 shadow-[0_4px_20px_rgba(0,0,0,0.2)] mb-8 hover:bg-surface-container-high/60 transition-colors cursor-default">
+            <span class="material-symbols-outlined text-secondary text-[16px] animate-pulse">verified</span>
+            <span class="font-label-caps text-label-caps uppercase text-secondary tracking-widest font-bold">Authorized Flagship Store</span>
+          </div>
+          
+          <!-- Main Headline -->
+          <h1 class="animate-[fade-in-up_1s_ease-out_0.2s_both] font-headline-lg-mobile md:text-[64px] md:leading-[1.1] font-extrabold text-on-surface tracking-tight mb-6 px-4 max-w-4xl text-center drop-shadow-xl">
+            Your Trusted Destination for <br class="hidden md:block"/>
+            <span class="bg-gradient-to-r from-primary via-[#8ca8f9] to-secondary bg-clip-text text-transparent drop-shadow-2xl">Smartphones &amp; Accessories</span>
+          </h1>
+          
+          <!-- Subtitle -->
+          <p class="animate-[fade-in-up_1s_ease-out_0.4s_both] font-body-sm md:text-[18px] text-on-surface-variant max-w-2xl mb-10 px-4 leading-relaxed text-center font-medium">
+            Experience flagship devices from Apple, Samsung, OnePlus &amp; luxury audio gear with official warranty, guaranteed best prices, and instant exchange deals.
+          </p>
+          
+          <!-- CTA Cluster -->
+          <div class="animate-[fade-in-up_1s_ease-out_0.6s_both] w-full flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-16 px-4">
+            <a class="relative overflow-hidden w-full sm:w-[240px] h-14 rounded-2xl bg-primary text-on-primary font-label-lg text-[16px] flex items-center justify-center gap-2 shadow-[0_0_40px_rgba(0,112,243,0.4)] hover:shadow-[0_0_60px_rgba(0,112,243,0.6)] hover:-translate-y-1 transition-all duration-300 group border border-white/20"
+              href="#products-showcase">
+              <span class="relative z-10 font-bold tracking-wide">Explore Collection</span>
+              <span class="material-symbols-outlined text-[20px] relative z-10 group-hover:translate-x-1.5 transition-transform duration-300">arrow_forward</span>
+              <!-- Shine effect -->
+              <div class="absolute top-0 -inset-full h-full w-1/2 z-0 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-20 group-hover:animate-[shimmer_1.5s_infinite]"></div>
+            </a>
+            
+            <a class="relative overflow-hidden w-full sm:w-[240px] h-14 rounded-2xl bg-surface-container-highest/40 backdrop-blur-xl text-white font-label-lg text-[16px] flex items-center justify-center gap-2 shadow-xl hover:shadow-[0_0_40px_rgba(37,211,102,0.25)] hover:bg-[#25D366]/10 hover:-translate-y-1 transition-all duration-300 group border border-white/10 hover:border-[#25D366]/50"
+              href="https://wa.me/919876543210?text=Hi%20i%20Mobiles,%20I%20am%20interested%20in%20flagship%20smartphones."
+              rel="noopener noreferrer" target="_blank">
+              <svg class="w-5 h-5 fill-[#25D366] relative z-10 group-hover:scale-110 transition-transform duration-300" viewbox="0 0 24 24">
+                <path
+                  d="M12.031 2c-5.523 0-10 4.477-10 10 0 1.77.464 3.486 1.346 5.006l-1.428 5.216 5.346-1.402a9.96 9.96 0 0 0 4.736 1.18h.004c5.522 0 10-4.477 10-10 0-5.523-4.478-10-10.004-10zm0 18.324c-1.503 0-2.977-.404-4.264-1.17l-.306-.182-3.17.831.846-3.09-.2-.318A8.307 8.307 0 0 1 3.708 12c0-4.59 3.733-8.324 8.323-8.324 4.59 0 8.324 3.734 8.324 8.324 0 4.59-3.734 8.324-8.324 8.324zm4.561-6.236c-.25-.125-1.478-.73-1.708-.813-.23-.083-.396-.125-.563.125-.166.25-.646.813-.792.98-.146.166-.292.187-.542.062s-1.056-.39-2.012-1.242c-.744-.664-1.247-1.484-1.393-1.734-.146-.25-.016-.385.109-.51.112-.112.25-.292.375-.438.125-.146.167-.25.25-.417.084-.166.042-.312-.02-.437-.063-.125-.563-1.355-.771-1.855-.203-.487-.41-.421-.563-.429l-.479-.008c-.167 0-.438.063-.667.312s-.875.855-.875 2.084.896 2.417 1.021 2.584c.125.166 1.763 2.693 4.271 3.777.597.258 1.064.412 1.428.528.6.191 1.146.164 1.578.101.481-.07 1.478-.604 1.687-1.188.209-.584.209-1.084.146-1.188-.062-.104-.229-.166-.479-.291z">
+                </path>
+              </svg>
+              <span class="relative z-10 font-bold tracking-wide group-hover:text-[#25D366] transition-colors duration-300">Enquire on WhatsApp</span>
+              <div class="absolute top-0 -inset-full h-full w-1/2 z-0 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white opacity-5 group-hover:animate-[shimmer_1.5s_infinite]"></div>
+            </a>
+          </div>
+          <!-- Hero Visual Grid with Products -->
+          <div class="w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mt-6 px-4">
+
+            <!-- Card 1: Apple / Flagship -->
+            <div
+              class="relative w-full rounded-3xl bg-surface-container-high/40 backdrop-blur-xl p-space-sm shadow-xl flex flex-col items-center border border-white/5 hover:border-primary/40 hover:-translate-y-2 hover:shadow-[0_12px_40px_rgba(174,198,255,0.15)] transition-all duration-500 group mt-4">
+              <div
+                class="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
+              </div>
+
+              <!-- Spec Pill 1 (Top Left Overlap) -->
+              <div
+                class="absolute -top-4 left-4 z-20 px-3 py-1.5 rounded-full bg-surface-container-highest/95 backdrop-blur-xl shadow-lg flex items-center gap-1.5 border border-white/10 group-hover:border-primary/40 transition-colors">
+                <span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+                <span class="font-label-caps text-label-caps text-on-surface font-bold">A18 Pro / 8 Gen 3</span>
+              </div>
+              <!-- Spec Pill 2 (Top Right Overlap) -->
+              <div
+                class="absolute -top-4 right-4 z-20 px-3 py-1.5 rounded-full bg-surface-container-highest/95 backdrop-blur-xl shadow-lg flex items-center gap-1.5 border border-white/10 group-hover:border-primary/40 transition-colors">
+                <span class="material-symbols-outlined text-secondary text-[14px]">shield</span>
+                <span class="font-label-caps text-label-caps text-secondary font-bold">100% Genuine</span>
+              </div>
+
+              <!-- Device Image -->
+              <div
+                class="relative w-full aspect-square max-w-[340px] rounded-2xl overflow-hidden flex items-center justify-center bg-gradient-to-b from-primary/10 via-transparent to-surface-container-lowest border border-white/5">
+                <img
+                  class="w-full h-full object-cover object-center rounded-2xl group-hover:scale-110 transition-transform duration-700"
+                  alt="High-end titanium luxury smartphone"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSanfsDkfLPijjZpNB73JtuMbuNTfTwoGORTZC0yODgYakmj1W2sqsQnJEm0lYIYVClfM-icdzRzYChkafbjn5p6FC5GwYvmVPXzeB6WQm-60XXdVnIafvNzyAd2xy404RgNKqtbVoF6bjQUZTQBrel10bW3dqc48Zi0yY12IBFOoBrVYOahb_6eXn5xGHtn-cqAZES9dS5DpIAcrwC73DlS-4tP-LhnTer7Cmk-aVbJiaMNzgLaDqcg" />
+              </div>
+
+              <!-- Micro Banner below image -->
+              <div
+                class="w-full mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-on-surface-variant font-label-caps text-label-caps relative z-10">
+                <span class="flex items-center gap-1 group-hover:text-primary transition-colors">
+                  <span class="material-symbols-outlined text-primary text-[14px]">local_shipping</span>
+                  Express Dispatch
+                </span>
+                <span class="flex items-center gap-1 group-hover:text-tertiary transition-colors">
+                  <span class="material-symbols-outlined text-tertiary text-[14px]">currency_exchange</span>
+                  Best Trade-in Rates
+                </span>
+              </div>
+            </div>
+
+            <!-- Card 2: Samsung Galaxy -->
+            <div
+              class="relative w-full rounded-3xl bg-surface-container-high/40 backdrop-blur-xl p-space-sm shadow-xl flex flex-col items-center border border-white/5 hover:border-secondary/40 hover:-translate-y-2 hover:shadow-[0_12px_40px_rgba(255,185,95,0.15)] transition-all duration-500 group mt-8 md:translate-y-4">
+              <div
+                class="absolute inset-0 rounded-3xl bg-gradient-to-br from-secondary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
+              </div>
+
+              <!-- Spec Pill 1 -->
+              <div
+                class="absolute -top-4 left-4 z-20 px-3 py-1.5 rounded-full bg-surface-container-highest/95 backdrop-blur-xl shadow-lg flex items-center gap-1.5 border border-white/10 group-hover:border-secondary/40 transition-colors">
+                <span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+                <span class="font-label-caps text-label-caps text-on-surface font-bold">Galaxy AI</span>
+              </div>
+              <!-- Spec Pill 2 -->
+              <div
+                class="absolute -top-4 right-4 z-20 px-3 py-1.5 rounded-full bg-surface-container-highest/95 backdrop-blur-xl shadow-lg flex items-center gap-1.5 border border-white/10 group-hover:border-secondary/40 transition-colors">
+                <span class="material-symbols-outlined text-primary text-[14px]">star</span>
+                <span class="font-label-caps text-label-caps text-primary font-bold">Top Seller</span>
+              </div>
+
+              <!-- Device Image -->
+              <div
+                class="relative w-full aspect-square max-w-[340px] rounded-2xl overflow-hidden flex items-center justify-center bg-gradient-to-b from-secondary/10 via-transparent to-surface-container-lowest border border-white/5">
+                <img
+                  class="w-full h-full object-cover object-center rounded-2xl group-hover:scale-110 transition-transform duration-700"
+                  alt="Premium smartphone with stylus"
+                  src="https://images.unsplash.com/photo-1707343843437-caacff5cfa74?q=80&w=400&auto=format&fit=crop" />
+              </div>
+
+              <!-- Micro Banner -->
+              <div
+                class="w-full mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-on-surface-variant font-label-caps text-label-caps relative z-10">
+                <span class="flex items-center gap-1 group-hover:text-secondary transition-colors">
+                  <span class="material-symbols-outlined text-secondary text-[14px]">draw</span>
+                  Stylus Included
+                </span>
+                <span class="flex items-center gap-1 group-hover:text-primary transition-colors">
+                  <span class="material-symbols-outlined text-primary text-[14px]">bolt</span>
+                  Instant Delivery
+                </span>
+              </div>
+            </div>
+
+            <!-- Card 3: Pixel -->
+            <div
+              class="relative w-full rounded-3xl bg-surface-container-high/40 backdrop-blur-xl p-space-sm shadow-xl flex flex-col items-center border border-white/5 hover:border-tertiary/40 hover:-translate-y-2 hover:shadow-[0_12px_40px_rgba(255,180,210,0.15)] transition-all duration-500 group mt-8 md:translate-y-8">
+              <div
+                class="absolute inset-0 rounded-3xl bg-gradient-to-br from-tertiary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
+              </div>
+
+              <!-- Spec Pill 1 -->
+              <div
+                class="absolute -top-4 left-4 z-20 px-3 py-1.5 rounded-full bg-surface-container-highest/95 backdrop-blur-xl shadow-lg flex items-center gap-1.5 border border-white/10 group-hover:border-tertiary/40 transition-colors">
+                <span class="w-2 h-2 rounded-full bg-tertiary animate-ping"></span>
+                <span class="font-label-caps text-label-caps text-on-surface font-bold">Pixel 9 Pro</span>
+              </div>
+              <!-- Spec Pill 2 -->
+              <div
+                class="absolute -top-4 right-4 z-20 px-3 py-1.5 rounded-full bg-surface-container-highest/95 backdrop-blur-xl shadow-lg flex items-center gap-1.5 border border-white/10 group-hover:border-tertiary/40 transition-colors">
+                <span class="material-symbols-outlined text-secondary text-[14px]">photo_camera</span>
+                <span class="font-label-caps text-label-caps text-secondary font-bold">Pro Camera</span>
+              </div>
+
+              <!-- Device Image -->
+              <div
+                class="relative w-full aspect-square max-w-[340px] rounded-2xl overflow-hidden flex items-center justify-center bg-gradient-to-b from-tertiary/10 via-transparent to-surface-container-lowest border border-white/5">
+                <img
+                  class="w-full h-full object-cover object-center rounded-2xl group-hover:scale-110 transition-transform duration-700"
+                  alt="Modern smartphone with advanced camera bar"
+                  src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=400&auto=format&fit=crop" />
+              </div>
+
+              <!-- Micro Banner -->
+              <div
+                class="w-full mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-on-surface-variant font-label-caps text-label-caps relative z-10">
+                <span class="flex items-center gap-1 group-hover:text-tertiary transition-colors">
+                  <span class="material-symbols-outlined text-tertiary text-[14px]">magic_button</span>
+                  Magic Editor
+                </span>
+                <span class="flex items-center gap-1 group-hover:text-primary transition-colors">
+                  <span class="material-symbols-outlined text-primary text-[14px]">verified</span>
+                  7 Yrs Updates
+                </span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Divider -->
+      <div class="w-full flex justify-center py-4">
+        <div class="w-2/3 h-px bg-gradient-to-r from-transparent via-on-surface-variant/20 to-transparent"></div>
+      </div>
+
+      <!-- 2. TRUST STATS & ABOUT SECTION (PREMIUM BENTO GRID) -->
+      <section id="about" class="w-full pb-space-xl flex flex-col gap-space-lg relative mt-4">
+        <!-- Background Ambient Glow -->
+        <div
+          class="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent pointer-events-none rounded-[3rem]">
+        </div>
+        <div class="absolute -left-10 top-20 w-72 h-72 bg-secondary/10 rounded-full blur-[80px] pointer-events-none">
+        </div>
+        <div class="absolute -right-10 bottom-0 w-96 h-96 bg-primary/10 rounded-full blur-[100px] pointer-events-none">
+        </div>
+
+        <!-- Section Header -->
+        <div class="flex flex-col items-center text-center gap-2 relative z-10">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-high/60 border border-white/5 backdrop-blur-md mb-2">
+            <span class="w-2 h-2 bg-secondary rounded-full animate-ping"></span>
+            <span class="w-2 h-2 bg-secondary rounded-full absolute"></span>
+            <span class="font-label-caps text-label-caps uppercase text-secondary font-bold tracking-wider ml-1">About
+              Us</span>
+          </div>
+          <h2 class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight">
+            Elevating the <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary-fixed to-secondary">Flagship
+              Experience</span>
+          </h2>
+          <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed max-w-2xl mt-2">
+            We don't just sell devices; we curate technology. For over a decade, we have been the trusted destination
+            for authentic, high-end smartphones and wearables, providing unparalleled personal care and trade-in
+            convenience.
+          </p>
+        </div>
+
+        <!-- Bento Grid Layout -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 relative z-10 w-full mt-4">
+
+          <!-- Large Feature Card -->
+          <div
+            class="md:col-span-2 rounded-3xl bg-gradient-to-br from-surface-container-high/80 to-surface-container/40 backdrop-blur-xl p-space-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.2)] hover:border-primary/40 hover:shadow-[0_8px_40px_rgba(174,198,255,0.15)] transition-all duration-500 group overflow-hidden relative flex flex-col justify-between min-h-[300px]">
+            <div
+              class="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-[60px] group-hover:bg-primary/30 transition-colors duration-700 transform translate-x-1/2 -translate-y-1/2">
+            </div>
+            <div class="relative z-10 flex flex-col gap-4 max-w-[60%]">
+              <div
+                class="w-12 h-12 rounded-2xl bg-primary/20 flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-500 border border-primary/30">
+                <span class="material-symbols-outlined text-[28px]">verified</span>
+              </div>
+              <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">100% Authentic & Certified</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">Every device is sourced directly from
+                authorized brand distributors. We guarantee zero counterfeits, full manufacturer warranty, and sealed,
+                un-tampered packaging.</p>
+            </div>
+            <div class="absolute right-0 bottom-0 w-1/2 h-full hidden md:block">
+              <img
+                src="https://images.unsplash.com/photo-1616348436168-de43ad0db179?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
+                alt="Premium Box"
+                class="w-full h-full object-cover object-left mask-image-gradient opacity-80 group-hover:scale-105 transition-transform duration-700"
+                style="-webkit-mask-image: linear-gradient(to right, transparent, black 40%);">
+            </div>
+          </div>
+
+          <!-- Stat Card 1 -->
+          <div
+            class="rounded-3xl bg-surface-container-high/40 backdrop-blur-xl p-space-md border border-white/5 shadow-lg hover:-translate-y-2 hover:bg-surface-container-high/60 hover:border-secondary/30 transition-all duration-300 flex flex-col items-center justify-center text-center gap-2 group relative overflow-hidden">
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-secondary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            </div>
+            <div
+              class="w-14 h-14 rounded-full bg-secondary/10 flex items-center justify-center text-secondary mb-2 group-hover:rotate-12 transition-transform duration-500">
+              <span class="material-symbols-outlined text-[32px]">workspace_premium</span>
+            </div>
+            <h4
+              class="font-display-hero-mobile text-[42px] font-bold text-on-surface leading-none group-hover:text-secondary transition-colors">
+              10+</h4>
+            <span class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant">Years
+              Legacy</span>
+          </div>
+
+          <!-- Stat Card 2 -->
+          <div
+            class="rounded-3xl bg-surface-container-high/40 backdrop-blur-xl p-space-md border border-white/5 shadow-lg hover:-translate-y-2 hover:bg-surface-container-high/60 hover:border-tertiary/30 transition-all duration-300 flex flex-col items-center justify-center text-center gap-2 group relative overflow-hidden">
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-tertiary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            </div>
+            <div
+              class="w-14 h-14 rounded-full bg-tertiary/10 flex items-center justify-center text-tertiary mb-2 group-hover:scale-110 transition-transform duration-500">
+              <span class="material-symbols-outlined text-[32px]">groups</span>
+            </div>
+            <h4
+              class="font-display-hero-mobile text-[42px] font-bold text-on-surface leading-none group-hover:text-tertiary transition-colors">
+              5k+</h4>
+            <span class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant">Happy
+              Clients</span>
+          </div>
+
+          <!-- Wide Feature Card -->
+          <div
+            class="md:col-span-2 rounded-3xl bg-surface-container-high/40 backdrop-blur-xl p-space-md border border-white/5 shadow-lg hover:bg-surface-container-high/60 hover:border-white/20 transition-all duration-300 flex items-center gap-6 group">
+            <div
+              class="w-20 h-20 shrink-0 rounded-2xl bg-gradient-to-br from-surface-bright to-surface flex items-center justify-center border border-white/10 shadow-inner group-hover:shadow-[0_0_20px_rgba(255,255,255,0.1)] transition-shadow">
+              <span
+                class="material-symbols-outlined text-[40px] text-on-surface group-hover:animate-bounce">currency_exchange</span>
+            </div>
+            <div class="flex flex-col gap-1">
+              <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Unmatched Trade-in Value</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant max-w-lg">Upgrade seamlessly. We offer the
+                highest market evaluation for your old devices, instantly credited towards your new flagship purchase.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section Divider -->
+      <div class="w-full flex justify-center py-8">
+        <div class="w-2/3 h-px bg-gradient-to-r from-transparent via-on-surface-variant/20 to-transparent"></div>
+      </div>
+
+      <!-- 3. PRODUCTS SHOWCASE SECTION -->
+      <section class="w-full py-space-md flex flex-col gap-space-md" id="products-showcase">
+        <div class="flex flex-col gap-1">
+          <div class="flex items-center gap-2">
+            <span class="w-5 h-0.5 bg-primary rounded-full"></span>
+            <span class="font-label-caps text-label-caps uppercase text-primary font-bold tracking-wider">Curated
+              Collection</span>
+          </div>
+          <h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Explore Our Products</h2>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">Bestselling flagship hardware and precision
+            accessories.</p>
+        </div>
+        <!-- Category Filter Tabs -->
+        <div class="w-full overflow-x-auto -mx-space-md px-space-md flex items-center gap-2 no-scrollbar">
+          <button
+            class="shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-label-md font-medium hover:text-on-surface transition-colors">
+            All
+          </button>
+          <button
+            class="shrink-0 px-3.5 py-1.5 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold shadow-[0_0_14px_rgba(0,112,243,0.5)]">
+            Smartphones
+          </button>
+          <button
+            class="shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-label-md font-medium hover:text-on-surface transition-colors">
+            Earbuds
+          </button>
+          <button
+            class="shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-label-md font-medium hover:text-on-surface transition-colors">
+            Smartwatches
+          </button>
+          <button
+            class="shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-label-md font-medium hover:text-on-surface transition-colors">
+            Chargers
+          </button>
+          <button
+            class="shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-label-md font-medium hover:text-on-surface transition-colors">
+            Cases &amp; Covers
+          </button>
+        </div>
+        <!-- Product Grid (Responsive up to 3 columns) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-space-md w-full">
+          <!-- Product Card 1 -->
+          <div
+            class="rounded-2xl bg-surface-container/60 backdrop-blur-xl p-space-sm flex flex-col justify-between shadow-lg hover:shadow-2xl hover:scale-[1.03] transition-all duration-300 ease-out relative overflow-hidden group h-full border border-white/10 dark:border-white/5">
+            <!-- Top Badges -->
+            <div class="flex items-center justify-between gap-1 mb-2">
+              <span
+                class="px-2 py-0.5 rounded-md bg-secondary/15 text-secondary font-label-caps text-label-caps font-bold uppercase">Pro
+                Flagship</span>
+              <span
+                class="px-1.5 py-0.5 rounded-md bg-surface-container-highest text-tertiary font-label-caps text-label-caps font-semibold">Save
+                ₹15,000</span>
+            </div>
+            <!-- Product Image Placeholder -->
+            <div
+              class="w-full aspect-[4/3] rounded-lg bg-surface-container-lowest/80 overflow-hidden relative flex items-center justify-center mb-space-xs">
+              <img class="w-full h-full object-cover"
+                data-alt="Apple iPhone 16 Pro Max natural titanium smartphone studio shot showing pristine camera island, sleek metallic bezel, dark subtle glass reflection, high fidelity clean lighting"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzE5Fe7j_Nf4fjZm_w9ZjE_-13aiKI9owCAlhIHgGChGJsRytfrU1fuzGAVV3kBc9BbJi099n87vfRNuiRpAYb5ZS339Z_fk0X04_kdbXXLMXZrNTQMLgLcBSHWrMytHkNjuWWl3Qjwav7zPBPNAGPjoF7gNbwejP9BBWyj-sH0vcVA_SuNg1Jtfc9isWkdizFxf25MkBa8xZSFkL2_B_7MIq0-7l6-O3KlvbYFt5cEkqOcipEmWPH2w" />
+            </div>
+            <!-- Info -->
+            <div class="flex flex-col gap-1 mb-space-sm">
+              <span class="font-label-caps text-label-caps uppercase text-outline">Apple</span>
+              <h3 class="font-label-lg text-label-lg font-bold text-on-surface line-clamp-1">iPhone 16 Pro Max</h3>
+              <div class="flex items-center gap-1.5 text-on-surface-variant font-label-caps text-label-caps">
+                <span class="px-1.5 py-0.5 rounded bg-surface-container-highest">Natural Titanium</span>
+                <span class="px-1.5 py-0.5 rounded bg-surface-container-highest">256GB</span>
+              </div>
+              <div class="flex items-baseline gap-2 mt-1">
+                <span class="font-headline-sm text-headline-sm font-bold text-primary">₹1,34,999</span>
+                <span class="font-body-sm text-body-sm text-outline line-through">₹1,49,999</span>
+              </div>
+            </div>
+            <!-- Enquire WhatsApp Button -->
+            <a class="w-full h-10 rounded-lg bg-[#25D366] hover:bg-[#20ba59] text-white font-label-md text-label-md font-semibold flex items-center justify-center gap-1.5 shadow-[0_0_12px_rgba(37,211,102,0.3)] transition-all"
+              href="https://wa.me/919876543210?text=Hi%20i%20Mobiles,%20I%20am%20enquiring%20about%20iPhone%2016%20Pro%20Max%20Natural%20Titanium."
+              rel="noopener noreferrer" target="_blank">
+              <span class="material-symbols-outlined text-[16px]">chat</span>
+              <span>Enquire</span>
+            </a>
+          </div>
+          <!-- Product Card 2 -->
+          <div
+            class="rounded-2xl bg-surface-container/60 backdrop-blur-xl p-space-sm flex flex-col justify-between shadow-lg hover:shadow-2xl hover:scale-[1.03] transition-all duration-300 ease-out relative overflow-hidden group h-full border border-white/10 dark:border-white/5">
+            <div class="flex items-center justify-between gap-1 mb-2">
+              <span
+                class="px-2 py-0.5 rounded-md bg-primary/15 text-primary font-label-caps text-label-caps font-bold uppercase">AI
+                Flagship</span>
+              <span
+                class="px-1.5 py-0.5 rounded-md bg-surface-container-highest text-tertiary font-label-caps text-label-caps font-semibold">Save
+                ₹12,000</span>
+            </div>
+            <div
+              class="w-full aspect-[4/3] rounded-lg bg-surface-container-lowest/80 overflow-hidden relative flex items-center justify-center mb-space-xs">
+              <img class="w-full h-full object-cover"
+                data-alt="Samsung Galaxy S25 Ultra titanium gray flagship smartphone studio product render with integrated S-pen, clean industrial aesthetic, dark gradient background"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCf1ADzxpP083FURBy9mLdFW230VFnH-_4G0iyKex1byBTurEBHfzT-RjZw-NjV85tkiSmsBfOni-a4d3Kw9EX8pbR-zUPCXeKKkPV-ADcduWxqy1GI5lykliVDoM4kvRVh_vrPyNcSKhZYzn9On53DESMVtzVVcmkzHxoLORkTBZDyzjiRyPd-jkTFLr4vkICnbG4gvYhSyOgrIqxorw5zs-6--cTklZcc3iJg-7iA3NM2f4f9kFYJQw" />
+            </div>
+            <div class="flex flex-col gap-1 mb-space-sm">
+              <span class="font-label-caps text-label-caps uppercase text-outline">Samsung</span>
+              <h3 class="font-label-lg text-label-lg font-bold text-on-surface line-clamp-1">Galaxy S25 Ultra</h3>
+              <div class="flex items-center gap-1.5 text-on-surface-variant font-label-caps text-label-caps">
+                <span class="px-1.5 py-0.5 rounded bg-surface-container-highest">Titanium Gray</span>
+                <span class="px-1.5 py-0.5 rounded bg-surface-container-highest">12GB · 512GB</span>
+              </div>
+              <div class="flex items-baseline gap-2 mt-1">
+                <span class="font-headline-sm text-headline-sm font-bold text-primary">₹1,29,999</span>
+                <span class="font-body-sm text-body-sm text-outline line-through">₹1,41,999</span>
+              </div>
+            </div>
+            <a class="w-full h-10 rounded-lg bg-[#25D366] hover:bg-[#20ba59] text-white font-label-md text-label-md font-semibold flex items-center justify-center gap-1.5 shadow-[0_0_12px_rgba(37,211,102,0.3)] transition-all"
+              href="https://wa.me/919876543210?text=Hi%20i%20Mobiles,%20I%20am%20enquiring%20about%20Samsung%20Galaxy%20S25%20Ultra."
+              rel="noopener noreferrer" target="_blank">
+              <span class="material-symbols-outlined text-[16px]">chat</span>
+              <span>Enquire</span>
+            </a>
+          </div>
+          <!-- Product Card 3 -->
+          <div
+            class="rounded-2xl bg-surface-container/60 backdrop-blur-xl p-space-sm flex flex-col justify-between shadow-lg hover:shadow-2xl hover:scale-[1.03] transition-all duration-300 ease-out relative overflow-hidden group h-full border border-white/10 dark:border-white/5">
+            <div class="flex items-center justify-between gap-1 mb-2">
+              <span
+                class="px-2 py-0.5 rounded-md bg-secondary/15 text-secondary font-label-caps text-label-caps font-bold uppercase">Hasselblad
+                Optics</span>
+              <span
+                class="px-1.5 py-0.5 rounded-md bg-surface-container-highest text-tertiary font-label-caps text-label-caps font-semibold">Save
+                ₹8,000</span>
+            </div>
+            <div
+              class="w-full aspect-[4/3] rounded-lg bg-surface-container-lowest/80 overflow-hidden relative flex items-center justify-center mb-space-xs">
+              <img class="w-full h-full object-cover"
+                data-alt="OnePlus 13 5G Midnight Black smartphone with circular ceramic camera dial, metallic luxury texture, dark studio lights"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3XGqaNCD7M0qcpoHl8y85JvRRrHNFsuGRours41Baa2maG3PMr3HF7F0eyg8HC2_kHL7FPF1qUVBrlX2d6a3NFYJkUYG8kXVNX4E0MbC57eFcyS6FOx_2XINa-p8HXDNZuErfRb2Xjw0LoHRaZpFU8gGBuSvdF8dj51P-nWylNXvyfs6hKANiQmqK8txdkkkEgKr22NR-QG6MsKriA3n8LzLPWHZ-NELUazLi6s7A9r8omrNN7XqN-Q" />
+            </div>
+            <div class="flex flex-col gap-1 mb-space-sm">
+              <span class="font-label-caps text-label-caps uppercase text-outline">OnePlus</span>
+              <h3 class="font-label-lg text-label-lg font-bold text-on-surface line-clamp-1">OnePlus 13 5G</h3>
+              <div class="flex items-center gap-1.5 text-on-surface-variant font-label-caps text-label-caps">
+                <span class="px-1.5 py-0.5 rounded bg-surface-container-highest">Midnight Black</span>
+                <span class="px-1.5 py-0.5 rounded bg-surface-container-highest">16GB · 512GB</span>
+              </div>
+              <div class="flex items-baseline gap-2 mt-1">
+                <span class="font-headline-sm text-headline-sm font-bold text-primary">₹69,999</span>
+                <span class="font-body-sm text-body-sm text-outline line-through">₹77,999</span>
+              </div>
+            </div>
+            <a class="w-full h-10 rounded-lg bg-[#25D366] hover:bg-[#20ba59] text-white font-label-md text-label-md font-semibold flex items-center justify-center gap-1.5 shadow-[0_0_12px_rgba(37,211,102,0.3)] transition-all"
+              href="https://wa.me/919876543210?text=Hi%20i%20Mobiles,%20I%20am%20enquiring%20about%20OnePlus%2013%205G."
+              rel="noopener noreferrer" target="_blank">
+              <span class="material-symbols-outlined text-[16px]">chat</span>
+              <span>Enquire</span>
+            </a>
+          </div>
+          <!-- Product Card 4 -->
+          <div
+            class="rounded-2xl bg-surface-container/60 backdrop-blur-xl p-space-sm flex flex-col justify-between shadow-lg hover:shadow-2xl hover:scale-[1.03] transition-all duration-300 ease-out relative overflow-hidden group h-full border border-white/10 dark:border-white/5">
+            <div class="flex items-center justify-between gap-1 mb-2">
+              <span
+                class="px-2 py-0.5 rounded-md bg-primary/15 text-primary font-label-caps text-label-caps font-bold uppercase">Pro
+                Audio</span>
+              <span
+                class="px-1.5 py-0.5 rounded-md bg-surface-container-highest text-tertiary font-label-caps text-label-caps font-semibold">Save
+                ₹3,000</span>
+            </div>
+            <div
+              class="w-full aspect-[4/3] rounded-lg bg-surface-container-lowest/80 overflow-hidden relative flex items-center justify-center mb-space-xs">
+              <img class="w-full h-full object-cover"
+                data-alt="Apple AirPods Pro 2 with USB-C case floating cleanly against dark glass backdrop with subtle blue rim light, sleek premium audio device"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4sfSBSKyXQT-MIRnZtMGohefaUwUTCGB-Akl5Q6yUzmNQ0rMWRFEG-G-6_FawjJ4X2JbE9Jz1SVJI7rVbEedyVVmwzQOR-gzHWnnysG6Ium9WatCCvih1crZmNE5qxpTTKMa6O_LiNEtrIi80sAaIbWeW63uRgy_zn_JFpPc1JyVzcs4J_gZID2nE5DFqJXYHYFJKFlc6Yb2ST_CayRb2aNVUm6gPrcmkZaMQWRYRAq3GwY4lGk05Og" />
+            </div>
+            <div class="flex flex-col gap-1 mb-space-sm">
+              <span class="font-label-caps text-label-caps uppercase text-outline">Apple Audio</span>
+              <h3 class="font-label-lg text-label-lg font-bold text-on-surface line-clamp-1">AirPods Pro 2 USB-C</h3>
+              <div class="flex items-center gap-1.5 text-on-surface-variant font-label-caps text-label-caps">
+                <span class="px-1.5 py-0.5 rounded bg-surface-container-highest">Active Noise Cancelling</span>
+                <span class="px-1.5 py-0.5 rounded bg-surface-container-highest">Spatial Audio</span>
+              </div>
+              <div class="flex items-baseline gap-2 mt-1">
+                <span class="font-headline-sm text-headline-sm font-bold text-primary">₹22,999</span>
+                <span class="font-body-sm text-body-sm text-outline line-through">₹25,999</span>
+              </div>
+            </div>
+            <a class="w-full h-10 rounded-lg bg-[#25D366] hover:bg-[#20ba59] text-white font-label-md text-label-md font-semibold flex items-center justify-center gap-1.5 shadow-[0_0_12px_rgba(37,211,102,0.3)] transition-all"
+              href="https://wa.me/919876543210?text=Hi%20i%20Mobiles,%20I%20am%20enquiring%20about%20AirPods%20Pro%202%20USB-C."
+              rel="noopener noreferrer" target="_blank">
+              <span class="material-symbols-outlined text-[16px]">chat</span>
+              <span>Enquire</span>
+            </a>
+          </div>
+          <!-- Product Card 5 -->
+          <div
+            class="rounded-2xl bg-surface-container/60 backdrop-blur-xl p-space-sm flex flex-col justify-between shadow-lg hover:shadow-2xl hover:scale-[1.03] transition-all duration-300 ease-out relative overflow-hidden group h-full border border-white/10 dark:border-white/5">
+            <div class="flex items-center justify-between gap-1 mb-2">
+              <span
+                class="px-2 py-0.5 rounded-md bg-secondary/15 text-secondary font-label-caps text-label-caps font-bold uppercase">Rugged
+                LTE</span>
+              <span
+                class="px-1.5 py-0.5 rounded-md bg-surface-container-highest text-tertiary font-label-caps text-label-caps font-semibold">Save
+                ₹5,000</span>
+            </div>
+            <div
+              class="w-full aspect-[4/3] rounded-lg bg-surface-container-lowest/80 overflow-hidden relative flex items-center justify-center mb-space-xs">
+              <img class="w-full h-full object-cover"
+                data-alt="Galaxy Watch Ultra 47mm LTE smartwatch titanium rugged watch with orange ocean strap on dark obsidian background with water droplet effects"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgpJ-SNnJKEW51MBJkH_oDmL1WhZTlGTyzOKFMii8zfHrMMEfj8q6jPe1lR0J43gpvnBFKNMkHR6neeHr5iEvgCS63KH_v2W_7kgslqnYYek7Kq9GqSzmZ1YDRgkQW1CkGGeiMVJ7yJdNRsmsHm2Clc5REO7IGgMKSRouGoYTO5bEhVJcks4VFLcT1mbXjEbWnuSMDGCF5zVYo06yD4WDIo4sJEfeclP2Jk5Yx_I4Nc7ZOhKEWzX--oQ" />
+            </div>
+            <div class="flex flex-col gap-1 mb-space-sm">
+              <span class="font-label-caps text-label-caps uppercase text-outline">Wearables</span>
+              <h3 class="font-label-lg text-label-lg font-bold text-on-surface line-clamp-1">Galaxy Watch Ultra</h3>
+              <div class="flex items-center gap-1.5 text-on-surface-variant font-label-caps text-label-caps">
+                <span class="px-1.5 py-0.5 rounded bg-surface-container-highest">47mm Titanium</span>
+                <span class="px-1.5 py-0.5 rounded bg-surface-container-highest">Dual GPS</span>
+              </div>
+              <div class="flex items-baseline gap-2 mt-1">
+                <span class="font-headline-sm text-headline-sm font-bold text-primary">₹44,999</span>
+                <span class="font-body-sm text-body-sm text-outline line-through">₹49,999</span>
+              </div>
+            </div>
+            <a class="w-full h-10 rounded-lg bg-[#25D366] hover:bg-[#20ba59] text-white font-label-md text-label-md font-semibold flex items-center justify-center gap-1.5 shadow-[0_0_12px_rgba(37,211,102,0.3)] transition-all"
+              href="https://wa.me/919876543210?text=Hi%20i%20Mobiles,%20I%20am%20enquiring%20about%20Galaxy%20Watch%20Ultra."
+              rel="noopener noreferrer" target="_blank">
+              <span class="material-symbols-outlined text-[16px]">chat</span>
+              <span>Enquire</span>
+            </a>
+          </div>
+          <!-- Product Card 6 -->
+          <div
+            class="rounded-2xl bg-surface-container/60 backdrop-blur-xl p-space-sm flex flex-col justify-between shadow-lg hover:shadow-2xl hover:scale-[1.03] transition-all duration-300 ease-out relative overflow-hidden group h-full border border-white/10 dark:border-white/5">
+            <div class="flex items-center justify-between gap-1 mb-2">
+              <span
+                class="px-2 py-0.5 rounded-md bg-tertiary/15 text-tertiary font-label-caps text-label-caps font-bold uppercase">Fast
+                Charging</span>
+              <span
+                class="px-1.5 py-0.5 rounded-md bg-surface-container-highest text-tertiary font-label-caps text-label-caps font-semibold">Save
+                ₹1,500</span>
+            </div>
+            <div
+              class="w-full aspect-[4/3] rounded-lg bg-surface-container-lowest/80 overflow-hidden relative flex items-center justify-center mb-space-xs">
+              <img class="w-full h-full object-cover"
+                data-alt="Anker GaN fast charger with multiple USB ports compact black matte finish power adapter illuminated with subtle blue glow on dark background"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDM-3rs9dk8ur40ePN679PR0CPoUxedmagVYJ6fvZkEggXz94qZLe9WPYipQbR4A3Vs-tv20l-XMaEAf8mZ5IzM3oUXd5v0ZM5S8G_wOSVxAazp5a76RxeV5pIF9iNOU8L1DwL20c-7oOl9sDISTWti0TJaKOO17RioaG9IUWRxm-tHzgbZN1t0q573ww0LHfP3pUEW2F88p3MKjIkZdzFV0F1GZ5kFXD32QlrCJ-FAgc0yU7EHACyq_w" />
+            </div>
+            <div class="flex flex-col gap-1 mb-space-sm">
+              <span class="font-label-caps text-label-caps uppercase text-outline">Anker Power</span>
+              <h3 class="font-label-lg text-label-lg font-bold text-on-surface line-clamp-1">65W GaN Fast Charger</h3>
+              <div class="flex items-center gap-1.5 text-on-surface-variant font-label-caps text-label-caps">
+                <span class="px-1.5 py-0.5 rounded bg-surface-container-highest">3 Ports PowerIQ</span>
+                <span class="px-1.5 py-0.5 rounded bg-surface-container-highest">Foldable Pins</span>
+              </div>
+              <div class="flex items-baseline gap-2 mt-1">
+                <span class="font-headline-sm text-headline-sm font-bold text-primary">₹3,499</span>
+                <span class="font-body-sm text-body-sm text-outline line-through">₹4,999</span>
+              </div>
+            </div>
+            <a class="w-full h-10 rounded-lg bg-[#25D366] hover:bg-[#20ba59] text-white font-label-md text-label-md font-semibold flex items-center justify-center gap-1.5 shadow-[0_0_12px_rgba(37,211,102,0.3)] transition-all"
+              href="https://wa.me/919876543210?text=Hi%20i%20Mobiles,%20I%20am%20enquiring%20about%20Anker%2065W%20GaN%20Fast%20Charger."
+              rel="noopener noreferrer" target="_blank">
+              <span class="material-symbols-outlined text-[16px]">chat</span>
+              <span>Enquire</span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- 4. WHY CHOOSE US SECTION (PREMIUM ANIMATED) -->
+      <section class="w-full py-space-xl flex flex-col gap-space-lg relative overflow-hidden group/section">
+        <!-- Interactive Background Particles -->
+        <div
+          class="absolute top-0 right-0 w-[500px] h-[500px] bg-secondary/5 rounded-full blur-[120px] pointer-events-none group-hover/section:bg-secondary/10 transition-colors duration-1000">
+        </div>
+        <div
+          class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[100px] pointer-events-none group-hover/section:bg-primary/10 transition-colors duration-1000">
+        </div>
+
+        <div class="flex flex-col gap-1 relative z-10">
+          <div class="flex items-center gap-2">
+            <span class="w-5 h-0.5 bg-secondary rounded-full"></span>
+            <span class="font-label-caps text-label-caps uppercase text-secondary font-bold tracking-wider">The i
+              Mobiles Advantage</span>
+          </div>
+          <h2 class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight">Why Choose <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">i Mobiles?</span></h2>
+          <p class="font-body-md text-body-md text-on-surface-variant max-w-xl">Exceptional customer journey with direct
+            factory guarantees.</p>
+        </div>
+
+        <div class="flex flex-col gap-4 relative z-10 w-full">
+          <!-- Feature 1 -->
+          <div
+            class="group relative p-space-md rounded-3xl bg-surface-container-high/30 backdrop-blur-xl flex items-center gap-6 shadow-md border border-white/5 hover:border-primary/40 hover:bg-surface-container-high/60 transition-all duration-500 overflow-hidden cursor-default">
+            <div
+              class="absolute inset-0 bg-gradient-to-r from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            </div>
+            <div
+              class="w-14 h-14 rounded-2xl bg-primary/10 shrink-0 flex items-center justify-center text-primary relative z-10 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 border border-primary/20">
+              <span class="material-symbols-outlined text-[28px]">verified_user</span>
+            </div>
+            <div class="flex flex-col relative z-10">
+              <h3
+                class="font-headline-sm text-headline-sm font-bold text-on-surface group-hover:text-primary transition-colors duration-300">
+                100% Genuine Products</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Direct brand authorization with valid
+                official warranty &amp; GST tax invoices.</p>
+            </div>
+          </div>
+          <!-- Feature 2 -->
+          <div
+            class="group relative p-space-md rounded-3xl bg-surface-container-high/30 backdrop-blur-xl flex items-center gap-6 shadow-md border border-white/5 hover:border-secondary/40 hover:bg-surface-container-high/60 transition-all duration-500 overflow-hidden cursor-default">
+            <div
+              class="absolute inset-0 bg-gradient-to-r from-secondary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            </div>
+            <div
+              class="w-14 h-14 rounded-2xl bg-secondary/10 shrink-0 flex items-center justify-center text-secondary relative z-10 group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-500 border border-secondary/20">
+              <span class="material-symbols-outlined text-[28px]">price_check</span>
+            </div>
+            <div class="flex flex-col relative z-10">
+              <h3
+                class="font-headline-sm text-headline-sm font-bold text-on-surface group-hover:text-secondary transition-colors duration-300">
+                Best Price Guarantee</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">We match and beat competitive market
+                quotes with seasonal instant cashback perks.</p>
+            </div>
+          </div>
+          <!-- Feature 3 -->
+          <div
+            class="group relative p-space-md rounded-3xl bg-surface-container-high/30 backdrop-blur-xl flex items-center gap-6 shadow-md border border-white/5 hover:border-tertiary/40 hover:bg-surface-container-high/60 transition-all duration-500 overflow-hidden cursor-default">
+            <div
+              class="absolute inset-0 bg-gradient-to-r from-tertiary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            </div>
+            <div
+              class="w-14 h-14 rounded-2xl bg-tertiary/10 shrink-0 flex items-center justify-center text-tertiary relative z-10 group-hover:scale-110 group-hover:rotate-180 transition-transform duration-700 ease-in-out border border-tertiary/20">
+              <span class="material-symbols-outlined text-[28px]">sync_alt</span>
+            </div>
+            <div class="flex flex-col relative z-10">
+              <h3
+                class="font-headline-sm text-headline-sm font-bold text-on-surface group-hover:text-tertiary transition-colors duration-300">
+                Instant Easy Exchange</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Get top diagnostic valuation for your
+                pre-owned device in under 10 minutes flat.</p>
+            </div>
+          </div>
+          <!-- Feature 4 -->
+          <div
+            class="group relative p-space-md rounded-3xl bg-surface-container-high/30 backdrop-blur-xl flex items-center gap-6 shadow-md border border-white/5 hover:border-primary-fixed/40 hover:bg-surface-container-high/60 transition-all duration-500 overflow-hidden cursor-default">
+            <div
+              class="absolute inset-0 bg-gradient-to-r from-primary-fixed/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            </div>
+            <div
+              class="w-14 h-14 rounded-2xl bg-surface shrink-0 flex items-center justify-center text-primary-fixed relative z-10 group-hover:scale-110 group-hover:-rotate-12 transition-transform duration-500 border border-primary-fixed/30 shadow-[0_0_15px_rgba(214,227,255,0.2)]">
+              <span class="material-symbols-outlined text-[28px]">support_agent</span>
+            </div>
+            <div class="flex flex-col relative z-10">
+              <h3
+                class="font-headline-sm text-headline-sm font-bold text-on-surface group-hover:text-primary-fixed transition-colors duration-300">
+                VIP After-Sales Care</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Free data transfer, tempered glass
+                application, and lifetime concierge troubleshooting.</p>
+            </div>
+          </div>
+          <!-- Feature 5 -->
+          <div
+            class="group relative p-space-md rounded-3xl bg-surface-container-high/30 backdrop-blur-xl flex items-center gap-6 shadow-md border border-white/5 hover:border-error/40 hover:bg-surface-container-high/60 transition-all duration-500 overflow-hidden cursor-default">
+            <div
+              class="absolute inset-0 bg-gradient-to-r from-error/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            </div>
+            <div
+              class="w-14 h-14 rounded-2xl bg-error/10 shrink-0 flex items-center justify-center text-error relative z-10 group-hover:scale-110 group-hover:translate-x-1 transition-transform duration-500 border border-error/20">
+              <span class="material-symbols-outlined text-[28px] group-hover:animate-bounce">bolt</span>
+            </div>
+            <div class="flex flex-col relative z-10">
+              <h3
+                class="font-headline-sm text-headline-sm font-bold text-on-surface group-hover:text-error transition-colors duration-300">
+                Same-Day Express Delivery</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Ultra-fast doorstep dispatch or quick
+                counter collection at our retail tech hub.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 5. CUSTOMER TESTIMONIALS SECTION -->
+      <section class="w-full py-space-xl flex flex-col gap-space-lg relative overflow-hidden">
+        <!-- Ambient Glow -->
+        <div class="absolute -left-20 top-0 w-80 h-80 bg-primary/10 rounded-full blur-[100px] pointer-events-none">
+        </div>
+        <div
+          class="absolute -right-20 bottom-0 w-80 h-80 bg-secondary/10 rounded-full blur-[100px] pointer-events-none">
+        </div>
+
+        <div class="flex flex-col items-center text-center gap-2 relative z-10 mb-8">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-high/60 border border-white/5 backdrop-blur-md mb-2">
+            <span class="w-2 h-2 bg-primary rounded-full animate-ping"></span>
+            <span class="w-2 h-2 bg-primary rounded-full absolute"></span>
+            <span class="font-label-caps text-label-caps uppercase text-primary font-bold tracking-wider ml-1">Verified
+              Reviews</span>
+          </div>
+          <h2 class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight">
+            What Our <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Customers
+              Say</span>
+          </h2>
+          <p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+            Real experiences from tech enthusiasts who demand the best.
+          </p>
+        </div>
+        <!-- Testimonial Cards Carousel / Scroll -->
+        <div
+          class="w-full overflow-x-auto pb-6 -mx-space-md px-space-md flex items-stretch gap-8 md:justify-center no-scrollbar snap-x snap-mandatory group/carousel">
+          <!-- Review 1 -->
+          <div
+            class="w-80 shrink-0 snap-center rounded-3xl bg-gradient-to-br from-surface-container-high/80 to-surface-container/40 backdrop-blur-xl p-space-lg flex flex-col justify-between shadow-[0_8px_32px_rgba(0,0,0,0.15)] border border-white/10 hover:border-primary/40 hover:shadow-[0_8px_40px_rgba(174,198,255,0.15)] hover:-translate-y-2 transition-all duration-500 relative overflow-hidden group">
+            <div
+              class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-[40px] group-hover:bg-primary/20 transition-colors duration-700 transform translate-x-1/2 -translate-y-1/2">
+            </div>
+            <div class="flex flex-col gap-4 relative z-10">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-1 text-secondary">
+                  <span class="material-symbols-outlined text-[20px] group-hover:animate-pulse">star</span>
+                  <span class="material-symbols-outlined text-[20px] group-hover:animate-pulse"
+                    style="animation-delay: 75ms;">star</span>
+                  <span class="material-symbols-outlined text-[20px] group-hover:animate-pulse"
+                    style="animation-delay: 150ms;">star</span>
+                  <span class="material-symbols-outlined text-[20px] group-hover:animate-pulse"
+                    style="animation-delay: 200ms;">star</span>
+                  <span class="material-symbols-outlined text-[20px] group-hover:animate-pulse"
+                    style="animation-delay: 300ms;">star</span>
+                </div>
+                <span
+                  class="material-symbols-outlined text-surface-container-highest text-[40px] group-hover:text-primary/20 transition-colors duration-500">format_quote</span>
+              </div>
+              <p class="font-body-md text-body-md text-on-surface-variant italic leading-relaxed">
+                "Bought my iPhone 16 Pro here. Got the best exchange rate for my old 13 Pro, and they transferred all my
+                data within 20 mins. Outstanding service!"
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-space-md mt-space-md border-t border-white/5 relative z-10">
+              <div
+                class="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-primary-fixed text-on-primary font-label-md text-label-md font-bold flex items-center justify-center shadow-lg">
+                RS
+              </div>
+              <div class="flex flex-col">
+                <span class="font-label-lg text-label-lg font-bold text-on-surface">Rahul Sharma</span>
+                <span class="font-label-caps text-label-caps text-primary tracking-wide">Verified Buyer</span>
+              </div>
+            </div>
+          </div>
+          <!-- Review 2 -->
+          <div
+            class="w-80 shrink-0 snap-center rounded-3xl bg-gradient-to-br from-surface-container-high/80 to-surface-container/40 backdrop-blur-xl p-space-lg flex flex-col justify-between shadow-[0_8px_32px_rgba(0,0,0,0.15)] border border-white/10 hover:border-secondary/40 hover:shadow-[0_8px_40px_rgba(255,185,95,0.15)] hover:-translate-y-2 transition-all duration-500 relative overflow-hidden group">
+            <div
+              class="absolute top-0 right-0 w-32 h-32 bg-secondary/10 rounded-full blur-[40px] group-hover:bg-secondary/20 transition-colors duration-700 transform translate-x-1/2 -translate-y-1/2">
+            </div>
+            <div class="flex flex-col gap-4 relative z-10">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-1 text-secondary">
+                  <span class="material-symbols-outlined text-[20px] group-hover:animate-pulse">star</span>
+                  <span class="material-symbols-outlined text-[20px] group-hover:animate-pulse"
+                    style="animation-delay: 75ms;">star</span>
+                  <span class="material-symbols-outlined text-[20px] group-hover:animate-pulse"
+                    style="animation-delay: 150ms;">star</span>
+                  <span class="material-symbols-outlined text-[20px] group-hover:animate-pulse"
+                    style="animation-delay: 200ms;">star</span>
+                  <span class="material-symbols-outlined text-[20px] group-hover:animate-pulse"
+                    style="animation-delay: 300ms;">star</span>
+                </div>
+                <span
+                  class="material-symbols-outlined text-surface-container-highest text-[40px] group-hover:text-secondary/20 transition-colors duration-500">format_quote</span>
+              </div>
+              <p class="font-body-md text-body-md text-on-surface-variant italic leading-relaxed">
+                "Genuine accessories and super responsive on WhatsApp. Ordered the Galaxy Watch Ultra and it arrived in
+                2 hours with authentic seal."
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-space-md mt-space-md border-t border-white/5 relative z-10">
+              <div
+                class="w-10 h-10 rounded-full bg-gradient-to-br from-secondary to-secondary-fixed text-on-secondary font-label-md text-label-md font-bold flex items-center justify-center shadow-lg">
+                PM
+              </div>
+              <div class="flex flex-col">
+                <span class="font-label-lg text-label-lg font-bold text-on-surface">Priya Menon</span>
+                <span class="font-label-caps text-label-caps text-secondary tracking-wide">Verified Buyer</span>
+              </div>
+            </div>
+          </div>
+          <!-- Review 3 -->
+          <div
+            class="w-80 shrink-0 snap-center rounded-3xl bg-gradient-to-br from-surface-container-high/80 to-surface-container/40 backdrop-blur-xl p-space-lg flex flex-col justify-between shadow-[0_8px_32px_rgba(0,0,0,0.15)] border border-white/10 hover:border-tertiary/40 hover:shadow-[0_8px_40px_rgba(61,226,115,0.15)] hover:-translate-y-2 transition-all duration-500 relative overflow-hidden group">
+            <div
+              class="absolute top-0 right-0 w-32 h-32 bg-tertiary/10 rounded-full blur-[40px] group-hover:bg-tertiary/20 transition-colors duration-700 transform translate-x-1/2 -translate-y-1/2">
+            </div>
+            <div class="flex flex-col gap-4 relative z-10">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-1 text-secondary">
+                  <span class="material-symbols-outlined text-[20px] group-hover:animate-pulse">star</span>
+                  <span class="material-symbols-outlined text-[20px] group-hover:animate-pulse"
+                    style="animation-delay: 75ms;">star</span>
+                  <span class="material-symbols-outlined text-[20px] group-hover:animate-pulse"
+                    style="animation-delay: 150ms;">star</span>
+                  <span class="material-symbols-outlined text-[20px] group-hover:animate-pulse"
+                    style="animation-delay: 200ms;">star</span>
+                  <span class="material-symbols-outlined text-[20px] group-hover:animate-pulse"
+                    style="animation-delay: 300ms;">star</span>
+                </div>
+                <span
+                  class="material-symbols-outlined text-surface-container-highest text-[40px] group-hover:text-tertiary/20 transition-colors duration-500">format_quote</span>
+              </div>
+              <p class="font-body-md text-body-md text-on-surface-variant italic leading-relaxed">
+                "Unbeatable price on OnePlus 13. Very honest team, original billing, and genuine after-sales guidance on
+                accessories."
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-space-md mt-space-md border-t border-white/5 relative z-10">
+              <div
+                class="w-10 h-10 rounded-full bg-gradient-to-br from-tertiary to-tertiary-fixed text-on-tertiary font-label-md text-label-md font-bold flex items-center justify-center shadow-lg">
+                AR
+              </div>
+              <div class="flex flex-col">
+                <span class="font-label-lg text-label-lg font-bold text-on-surface">Aniket Roy</span>
+                <span class="font-label-caps text-label-caps text-tertiary tracking-wide">Verified Buyer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 6. CONTACT & WHATSAPP ENQUIRY SECTION -->
+      <section class="w-full py-space-xl flex flex-col gap-space-lg relative overflow-hidden group/contact">
+        <!-- Ambient Background Glows -->
+        <div
+          class="absolute top-0 right-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[100px] pointer-events-none group-hover/contact:bg-primary/15 transition-colors duration-1000">
+        </div>
+        <div
+          class="absolute bottom-0 left-0 w-[300px] h-[300px] bg-secondary/5 rounded-full blur-[80px] pointer-events-none group-hover/contact:bg-secondary/15 transition-colors duration-1000">
+        </div>
+
+        <div class="flex flex-col gap-2 items-center text-center relative z-10 mb-4">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-high/60 border border-white/5 backdrop-blur-md mb-2">
+            <span class="w-2 h-2 bg-secondary rounded-full animate-ping"></span>
+            <span class="w-2 h-2 bg-secondary rounded-full absolute"></span>
+            <span class="font-label-caps text-label-caps uppercase text-secondary font-bold tracking-wider ml-1">Connect
+              With Us</span>
+          </div>
+          <h2 class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight">Visit Our <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-tertiary">Store</span> or Chat
+          </h2>
+          <p class="font-body-md text-body-md text-on-surface-variant max-w-xl">Immediate response directly on WhatsApp
+            from our device specialists.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-space-md relative z-10">
+          <!-- WhatsApp Form Card -->
+          <div
+            class="w-full rounded-3xl bg-surface-container/60 backdrop-blur-xl p-space-md shadow-lg border border-white/5 hover:border-primary/40 hover:shadow-[0_8px_40px_rgba(174,198,255,0.15)] hover:-translate-y-1 transition-all duration-500 flex flex-col gap-space-sm relative overflow-hidden group">
+            <div
+              class="absolute -top-10 -right-10 w-40 h-40 bg-primary/10 rounded-full blur-[40px] pointer-events-none group-hover:bg-primary/25 group-hover:scale-150 transition-all duration-700">
+            </div>
+
+            <div class="flex items-center gap-3 pb-2 border-b border-white/5 relative z-10">
+              <div
+                class="w-12 h-12 rounded-xl bg-[#25D366]/10 flex items-center justify-center text-[#25D366] border border-[#25D366]/20 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500">
+                <span class="material-symbols-outlined text-[28px]">chat</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="font-label-lg text-label-lg font-bold text-on-surface">WhatsApp Enquiry</span>
+                <span class="font-body-sm text-body-sm text-on-surface-variant">Instant Replies</span>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-space-xs relative z-10">
+              <label class="font-label-caps text-label-caps uppercase text-outline">Your Name</label>
+              <input
+                class="w-full h-11 px-3.5 rounded-lg bg-surface-container-high text-on-surface font-body-sm text-body-sm placeholder:text-outline/60 border border-transparent focus:border-primary/50 focus:ring-2 focus:ring-primary/20 outline-none transition-all duration-300 hover:bg-surface-container-highest"
+                id="enq-name" placeholder="e.g. John Doe" type="text" />
+            </div>
+            <div class="flex flex-col gap-space-xs relative z-10">
+              <label class="font-label-caps text-label-caps uppercase text-outline">Phone Number</label>
+              <input
+                class="w-full h-11 px-3.5 rounded-lg bg-surface-container-high text-on-surface font-body-sm text-body-sm placeholder:text-outline/60 border border-transparent focus:border-primary/50 focus:ring-2 focus:ring-primary/20 outline-none transition-all duration-300 hover:bg-surface-container-highest"
+                id="enq-phone" placeholder="+91 98765 00000" type="tel" />
+            </div>
+            <div class="flex flex-col gap-space-xs relative z-10">
+              <label class="font-label-caps text-label-caps uppercase text-outline">Device Interested In</label>
+              <input
+                class="w-full h-11 px-3.5 rounded-lg bg-surface-container-high text-on-surface font-body-sm text-body-sm placeholder:text-outline/60 border border-transparent focus:border-primary/50 focus:ring-2 focus:ring-primary/20 outline-none transition-all duration-300 hover:bg-surface-container-highest"
+                id="enq-device" placeholder="e.g. iPhone 16 Pro Max 256GB" type="text" />
+            </div>
+            <div class="flex flex-col gap-space-xs relative z-10">
+              <label class="font-label-caps text-label-caps uppercase text-outline">Your Message / Trade-in
+                Details</label>
+              <textarea
+                class="w-full p-3 rounded-lg bg-surface-container-high text-on-surface font-body-sm text-body-sm placeholder:text-outline/60 border border-transparent focus:border-primary/50 focus:ring-2 focus:ring-primary/20 outline-none transition-all duration-300 hover:bg-surface-container-highest resize-none"
+                id="enq-message" placeholder="Ask about price, exchange value, or stock availability..."
+                rows="2"></textarea>
+            </div>
+            <button
+              class="w-full h-12 mt-2 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 shadow-[0_4px_14px_rgba(37,211,102,0.4)] hover:shadow-[0_6px_20px_rgba(37,211,102,0.6)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 relative z-10 overflow-hidden group/btn"
+              id="send-whatsapp-btn">
+              <div
+                class="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover/btn:translate-x-[100%] transition-transform duration-700 ease-in-out">
+              </div>
+              <svg class="w-5 h-5 fill-current" viewbox="0 0 24 24">
+                <path
+                  d="M12.031 2c-5.523 0-10 4.477-10 10 0 1.77.464 3.486 1.346 5.006l-1.428 5.216 5.346-1.402a9.96 9.96 0 0 0 4.736 1.18h.004c5.522 0 10-4.477 10-10 0-5.523-4.478-10-10.004-10zm0 18.324c-1.503 0-2.977-.404-4.264-1.17l-.306-.182-3.17.831.846-3.09-.2-.318A8.307 8.307 0 0 1 3.708 12c0-4.59 3.733-8.324 8.323-8.324 4.59 0 8.324 3.734 8.324 8.324 0 4.59-3.734 8.324-8.324 8.324zm4.561-6.236c-.25-.125-1.478-.73-1.708-.813-.23-.083-.396-.125-.563.125-.166.25-.646.813-.792.98-.146.166-.292.187-.542.062s-1.056-.39-2.012-1.242c-.744-.664-1.247-1.484-1.393-1.734-.146-.25-.016-.385.109-.51.112-.112.25-.292.375-.438.125-.146.167-.25.25-.417.084-.166.042-.312-.02-.437-.063-.125-.563-1.355-.771-1.855-.203-.487-.41-.421-.563-.429l-.479-.008c-.167 0-.438.063-.667.312s-.875.855-.875 2.084.896 2.417 1.021 2.584c.125.166 1.763 2.693 4.271 3.777.597.258 1.064.412 1.428.528.6.191 1.146.164 1.578.101.481-.07 1.478-.604 1.687-1.188.209-.584.209-1.084.146-1.188-.062-.104-.229-.166-.479-.291z">
+                </path>
+              </svg>
+              <span>Send Message</span>
+            </button>
+          </div>
+
+          <!-- Store Information Card -->
+          <div
+            class="w-full rounded-3xl bg-surface-container/60 backdrop-blur-xl p-space-md shadow-lg border border-white/5 hover:border-secondary/40 hover:shadow-[0_8px_40px_rgba(255,185,95,0.15)] hover:-translate-y-1 transition-all duration-500 flex flex-col gap-space-sm relative overflow-hidden group">
+            <div
+              class="absolute -bottom-10 -left-10 w-40 h-40 bg-secondary/10 rounded-full blur-[40px] pointer-events-none group-hover:bg-secondary/25 group-hover:scale-150 transition-all duration-700">
+            </div>
+
+            <div class="flex items-center gap-3 pb-2 border-b border-white/5 relative z-10">
+              <div
+                class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary border border-secondary/20 group-hover:scale-110 group-hover:-rotate-6 transition-transform duration-500">
+                <span class="material-symbols-outlined text-[28px]">storefront</span>
+              </div>
+              <div class="flex flex-col">
+                <h3 class="font-label-lg text-label-lg font-bold text-on-surface">Store Information</h3>
+                <span class="font-body-sm text-body-sm text-on-surface-variant">Come visit our flagship hub</span>
+              </div>
+            </div>
+
+            <!-- Address details -->
+            <div class="flex flex-col gap-3 text-on-surface-variant font-body-sm text-body-sm relative z-10 py-1">
+              <div class="flex items-start gap-3 group/item">
+                <div
+                  class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0 group-hover/item:bg-secondary/20 group-hover/item:text-secondary transition-colors">
+                  <span class="material-symbols-outlined text-[18px]">location_on</span>
+                </div>
+                <span class="pt-1.5">Shop #14, Galleria Tech Hub, MG Road, Metro Pillar 120</span>
+              </div>
+              <div class="flex items-center gap-3 group/item">
+                <div
+                  class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0 group-hover/item:bg-primary/20 group-hover/item:text-primary transition-colors">
+                  <span class="material-symbols-outlined text-[18px]">schedule</span>
+                </div>
+                <span>Mon - Sun: 10:00 AM – 9:30 PM</span>
+              </div>
+              <div class="flex items-center gap-3 group/item">
+                <div
+                  class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0 group-hover/item:bg-tertiary/20 group-hover/item:text-tertiary transition-colors">
+                  <span class="material-symbols-outlined text-[18px]">call</span>
+                </div>
+                <a class="text-on-surface hover:text-primary transition-colors font-medium" href="tel:+919876543210">+91
+                  98765 43210</a>
+              </div>
+            </div>
+
+            <!-- Map Location Preview -->
+            <div
+              class="w-full h-36 rounded-2xl bg-surface-container-highest flex items-end p-2 relative overflow-hidden shadow-inner mt-1 group/map">
+              <div
+                class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover/map:scale-110"
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDKcBU18SqS4TXEszxJrryCHpX--5jU6q-vUgcALja_mVrEYWzBvfDR7ySqQpB2FVvu1KhlAgiapuQ-aCoG_13rrkSeT4Pg6Aq2TNet6gt0zVq8qlyZ0-HQ6kT6n_9Gdax5_doS-It9yhPS9VXVe3jPFcwvfpH6x3NxAVzxMsyDS2GfIO6_fKAJH3oA2OhygpdpnOQOtF49e-3FpI7rkh2x4OxI48oDb9hwgqcmFU-b6MGiCTY0vH7QXA')">
+              </div>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+              <div
+                class="relative z-10 w-full p-2.5 rounded-xl bg-surface-container/60 backdrop-blur-md flex items-center justify-between border border-white/10 group-hover/map:bg-surface-container/80 transition-colors">
+                <div class="flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-secondary text-[16px] animate-bounce">pin_drop</span>
+                  <span class="font-label-caps text-label-caps text-white font-semibold">MG Road Metro 120</span>
+                </div>
+                <a class="px-3 py-1.5 rounded-lg bg-primary-container hover:bg-primary text-on-primary-container font-label-caps text-label-caps font-bold transition-colors shadow-lg flex items-center gap-1"
+                  href="https://maps.google.com" rel="noopener noreferrer" target="_blank">
+                  Get Route <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Social Links & Ratings pill -->
+            <div class="flex items-center justify-between pt-3 relative z-10">
+              <div class="flex items-center gap-2">
+                <a class="w-9 h-9 rounded-full bg-surface-container-high border border-white/5 flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary/30 hover:shadow-[0_0_15px_rgba(174,198,255,0.2)] hover:-translate-y-1 transition-all duration-300"
+                  href="#">
+                  <span class="font-label-caps text-label-caps font-bold">IG</span>
+                </a>
+                <a class="w-9 h-9 rounded-full bg-surface-container-high border border-white/5 flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary/30 hover:shadow-[0_0_15px_rgba(174,198,255,0.2)] hover:-translate-y-1 transition-all duration-300"
+                  href="#">
+                  <span class="font-label-caps text-label-caps font-bold">FB</span>
+                </a>
+                <a class="w-9 h-9 rounded-full bg-surface-container-high border border-white/5 flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary/30 hover:shadow-[0_0_15px_rgba(174,198,255,0.2)] hover:-translate-y-1 transition-all duration-300"
+                  href="#">
+                  <span class="font-label-caps text-label-caps font-bold">YT</span>
+                </a>
+              </div>
+              <div
+                class="flex items-center gap-1.5 bg-surface-container-highest/80 backdrop-blur-sm border border-secondary/20 px-3 py-1.5 rounded-full text-secondary font-label-caps text-label-caps font-bold hover:bg-secondary/10 transition-colors cursor-default">
+                <span class="material-symbols-outlined text-[16px] animate-pulse">star</span>
+                <span>4.9 Google Reviews</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Divider -->
+      <div class="w-full flex justify-center py-8">
+        <div class="w-2/3 h-px bg-gradient-to-r from-transparent via-on-surface-variant/20 to-transparent"></div>
+      </div>
+
+
+    </div>
+    <script>
+      // Dynamic WhatsApp Interactive Dispatch
+      document.getElementById('send-whatsapp-btn')?.addEventListener('click', function () {
+        const name = encodeURIComponent(document.getElementById('enq-name')?.value.trim() || 'Valued Customer');
+        const phone = encodeURIComponent(document.getElementById('enq-phone')?.value.trim() || 'N/A');
+        const device = encodeURIComponent(document.getElementById('enq-device')?.value.trim() || 'Flagship Smartphone');
+        const message = encodeURIComponent(document.getElementById('enq-message')?.value.trim() || 'Please share availability and current offers.');
+
+        const text = `Hi i Mobiles team! My name is ${name} (Phone: ${phone}). I am interested in: ${device}. Note: ${message}`;
+        const url = `https://wa.me/919876543210?text=${text}`;
+        window.open(url, '_blank');
+      });
+    </script>
+    <footer id="contact"
+      class="mt-space-2xl pt-12 pb-24 md:pb-12 bg-surface-container-lowest/80 backdrop-blur-2xl rounded-t-[40px] border-t border-white/10 relative overflow-hidden group/footer shadow-[0_-8px_40px_rgba(0,0,0,0.4)]">
+      <!-- Ambient Glows -->
+      <div
+        class="absolute -top-40 -left-40 w-80 h-80 bg-primary/10 rounded-full blur-[80px] pointer-events-none group-hover/footer:bg-primary/20 transition-colors duration-1000">
+      </div>
+      <div
+        class="absolute -bottom-40 -right-40 w-80 h-80 bg-secondary/10 rounded-full blur-[80px] pointer-events-none group-hover/footer:bg-secondary/20 transition-colors duration-1000">
+      </div>
+
+      <div class="max-w-7xl mx-auto px-6 relative z-10 flex flex-col md:flex-row gap-12 md:gap-8 justify-between">
+
+        <!-- Brand & Description -->
+        <div class="flex flex-col gap-4 md:max-w-xs">
+          <div class="flex items-center gap-3 group/logo cursor-pointer w-fit">
+            <div
+              class="w-10 h-10 rounded-xl bg-surface-container-high border border-white/10 flex items-center justify-center p-2 group-hover/logo:border-primary/40 group-hover/logo:shadow-[0_0_20px_rgba(174,198,255,0.2)] transition-all duration-500 group-hover/logo:rotate-12 group-hover/logo:scale-110">
+              <img alt="i Mobiles Logo" class="w-full h-full object-contain"
+                src="https://lh3.googleusercontent.com/aida/AEtjO1V96qIJ7nQQ3ALolqC9fRZDNyoDmPPK2cFopkyI2F1VmgHGxF3ifOvpJzJSZgkrHZ2-Z2B4kBjpp2YCPtcmev7ODSaM9KoMXYbokjeNQJyFxnw5zyaIuFSKFhN03sMEnUz9GjnGoQcF6p63bFMLQK5q7Gkg03S9muYshyWhLjBcKusS2CRvZhuQ_fdbzCCSEG2OnwLQrO2E4Wp238_sk8zxSXMOsprpgUEnNlT_8NwadoV0rPA6-pvt9Ks" />
+            </div>
+            <span
+              class="font-headline-md text-headline-md font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white to-white/70 tracking-tight group-hover/logo:to-primary transition-all duration-500">i
+              Mobiles</span>
+          </div>
+          <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Premier destination for authentic flagship smartphones, wearable technology, and precision audio gear.
+          </p>
+        </div>
+
+        <!-- Links Grid -->
+        <div class="grid grid-cols-2 gap-8 md:gap-16 w-full md:w-auto">
+
+          <!-- Quick Links -->
+          <div class="flex flex-col gap-4">
+            <span
+              class="font-label-lg text-label-lg uppercase text-primary font-bold tracking-widest flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span> Quick Links
+            </span>
+            <div class="flex flex-col gap-3">
+              <a class="group/link flex items-center gap-2 font-body-md text-body-md text-on-surface-variant hover:text-white transition-colors w-fit"
+                data-path="home" href="#">
+                <span class="w-0 h-px bg-white group-hover/link:w-4 transition-all duration-300"></span> Home
+              </a>
+              <a class="group/link flex items-center gap-2 font-body-md text-body-md text-on-surface-variant hover:text-white transition-colors w-fit"
+                data-path="catalog" href="#">
+                <span class="w-0 h-px bg-white group-hover/link:w-4 transition-all duration-300"></span> Products
+              </a>
+              <a class="group/link flex items-center gap-2 font-body-md text-body-md text-on-surface-variant hover:text-white transition-colors w-fit"
+                data-path="about" href="#">
+                <span class="w-0 h-px bg-white group-hover/link:w-4 transition-all duration-300"></span> About Us
+              </a>
+              <a class="group/link flex items-center gap-2 font-body-md text-body-md text-on-surface-variant hover:text-white transition-colors w-fit"
+                data-path="why-us" href="#">
+                <span class="w-0 h-px bg-white group-hover/link:w-4 transition-all duration-300"></span> Why Us
+              </a>
+            </div>
+          </div>
+
+          <!-- Help & Concierge -->
+          <div class="flex flex-col gap-4">
+            <span
+              class="font-label-lg text-label-lg uppercase text-secondary font-bold tracking-widest flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span> Help & Concierge
+            </span>
+            <div class="flex flex-col gap-3">
+              <span class="flex items-center gap-2 font-body-md text-body-md text-on-surface-variant">
+                <span class="material-symbols-outlined text-[18px]">schedule</span> 10:00 AM - 9:00 PM
+              </span>
+              <a class="group/link flex items-center gap-2 font-body-md text-body-md text-on-surface-variant hover:text-white transition-colors w-fit"
+                href="tel:+18005550199">
+                <span
+                  class="material-symbols-outlined text-[18px] group-hover/link:text-primary transition-colors">call</span>
+                +1 (800) 555-0199
+              </a>
+              <a class="group/link flex items-center gap-2 font-body-md text-body-md text-[#25D366] hover:text-[#25D366] w-fit"
+                href="https://wa.me/" rel="noopener noreferrer" target="_blank">
+                <div
+                  class="w-8 h-8 rounded-full bg-[#25D366]/10 flex items-center justify-center group-hover/link:bg-[#25D366] group-hover/link:text-white transition-colors duration-300">
+                  <span class="material-symbols-outlined text-[18px]">chat</span>
+                </div>
+                <span
+                  class="font-medium relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-[#25D366] group-hover/link:after:w-full after:transition-all after:duration-300">WhatsApp
+                  Quick Link</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Divider & Copyright -->
+      <div class="max-w-7xl mx-auto px-6 mt-12 relative z-10">
+        <div class="w-full h-px bg-gradient-to-r from-white/0 via-white/10 to-white/0 mb-6"></div>
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+          <span class="font-label-md text-label-md text-outline">© i Mobiles 2026. All rights reserved.</span>
+          <div class="flex gap-4">
+            <a href="#" class="text-outline hover:text-white transition-colors font-label-md text-label-md">Privacy
+              Policy</a>
+            <a href="#" class="text-outline hover:text-white transition-colors font-label-md text-label-md">Terms of
+              Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main><a aria-label="WhatsApp Concierge"
+    class="fixed bottom-24 right-5 z-50 w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-[0_0_24px_rgba(37,211,102,0.45)] hover:shadow-[0_0_32px_rgba(37,211,102,0.6)] animate-pulse transition-all"
+    href="https://wa.me/" rel="noopener noreferrer" target="_blank"><span
+      class="material-symbols-outlined text-[28px]">chat</span></a>
+  <nav
+    class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_-4px_20px_rgba(0,0,0,0.35)]"
+    data-active-classes="text-primary-container font-semibold">
+    <div class="max-w-md mx-auto flex justify-around items-center h-20 px-space-sm"><a aria-current="page"
+        class="flex flex-col items-center justify-center gap-1 min-w-[44px] min-h-[44px] w-16 h-16 transition-colors text-primary-container font-semibold"
+        data-path="home" href="#"><span class="material-symbols-outlined text-[22px]">storefront</span><span
+          class="font-label-caps text-label-caps">Store</span></a><a
+        class="flex flex-col items-center justify-center gap-1 min-w-[44px] min-h-[44px] w-16 h-16 text-on-surface-variant transition-colors"
+        data-path="catalog" href="#"><span class="material-symbols-outlined text-[22px]">devices</span><span
+          class="font-label-caps text-label-caps">Catalog</span></a><a
+        class="flex flex-col items-center justify-center gap-1 min-w-[44px] min-h-[44px] w-16 h-16 text-on-surface-variant transition-colors"
+        data-path="cart" href="#"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span
+          class="font-label-caps text-label-caps">Bag</span></a><a
+        class="flex flex-col items-center justify-center gap-1 min-w-[44px] min-h-[44px] w-16 h-16 text-on-surface-variant transition-colors"
+        data-path="support" href="#"><span class="material-symbols-outlined text-[22px]">support_agent</span><span
+          class="font-label-caps text-label-caps">Care</span></a></div>
+  </nav>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

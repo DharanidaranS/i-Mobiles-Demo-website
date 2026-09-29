@@ -1,0 +1,9 @@
+{
+  "name": "stitch-design-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "postinstall": "cd stitch_i_mobiles_premium_storefront && npm install",
+    "dev": "cd stitch_i_mobiles_premium_storefront && npm run dev"
+  }
+}
